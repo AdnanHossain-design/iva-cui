@@ -148,39 +148,6 @@ cd iva-cui-backend\python_middleware
 python test_conv.py
 ```
 
-## Troubleshooting
-
-#### Unity: `Error: Cannot connect to destination host`
-
-- Ensure backend servers (LLM + middleware + ASR) are running.
-- Check that the ports in `ServerInterface.cs` match your backend servers.
-- If Unity is running on Mac and backend on WSL, use your **LAN IP** instead of `localhost`.
-
-#### Unity: TLS/SSL errors
-
-- Happens if backend runs on HTTPS but Unity points to `http://`. Change Unity code to `https://`.
-
-#### Unity: TLS/SSL errors
-
-- Happens if backend runs on HTTPS but Unity points to `http://`. Change Unity code to `https://`.
-
-#### Backend Python packages
-
-If `pip install openai ollama edge-tts FastAPI[all]` fails on Windows PowerShell, run:
-
-```bash
-python  -m  pip  install  --upgrade  pip  setuptools  wheel
-pip  install  openai  ollama  edge-tts  "fastapi[all]"
-```
-
-#### WSL CUDA setup for ASR
-
-If CUDA libraries fail to load, check that:
-
-```bash
-echo  $LD_LIBRARY_PATH
-```
-
 ## Authors
 
 [Mykola Maslych](https://github.com/maslychm), [Mohammadreza Katebi](https://github.com/MRkatebi99), [Christopher Lee](https://github.com/hpipyT), [Yahya Hmaiti](https://github.com/YHmaiti), [Amirpouya Ghasemaghaei](https://github.com/PouyaAghaei), [Christian Pumarada](https://github.com/Aurelius1824), [Janneese Palmer](https://github.com/janneese), [Esteban Segarra Martinez](https://overcodedstack.github.io/), [Marco Emporio](https://marcokero.github.io/), [Warren Snipes](https://github.com/LockedThread), [Ryan P. McMahan](https://orcid.org/0000-0001-9357-9696), [Joseph J. LaViola Jr.](https://orcid.org/0000-0003-1186-4130)
